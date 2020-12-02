@@ -42,7 +42,7 @@ jar {
 	manifest {
 		attributes(
 				'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-				'Main-Class': 'keelfy.sapr.Sapr'
+				'Main-Class': 'keelfy.sapr.Main'
 		)
 	}
 }
