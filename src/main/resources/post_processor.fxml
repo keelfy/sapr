@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane minWidth="-Infinity" prefHeight="712.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keelfy.sapr.controller.processing.PostProcessorController">
+    <TableView fx:id="resultTable" layoutX="4.0" layoutY="257.0" prefHeight="455.0" prefWidth="758.0">
+      <columns>
+          <TableColumn prefWidth="74.0" text="x" fx:id="xTableColumn" />
+          <TableColumn fx:id="nTableColumn" prefWidth="89.0" text="Nx" />
+          <TableColumn fx:id="uTableColumn" prefWidth="81.0" text="Ux" />
+          <TableColumn fx:id="sigmaTableColumn" prefWidth="89.0" text="σx" />
+      </columns>
+        <columnResizePolicy>
+          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+        </columnResizePolicy>
+    </TableView>
+    <Button layoutX="42.0" layoutY="156.0" mnemonicParsing="false" onAction="#valuesButtonClicked" prefHeight="25.0" prefWidth="210.0" text="Провести расчёт" />
+    <Text layoutX="44.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Шаг дискретизации:" wrappingWidth="154.13671875">
+      <font>
+         <Font size="15.0" />
+      </font></Text>
+    <ComboBox fx:id="barComboBox" layoutX="188.0" layoutY="91.0" onAction="#barSelected" prefHeight="25.0" prefWidth="63.0" />
+    <Text layoutX="66.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Номер стержня:">
+        <font>
+          <Font size="15.0" />
+        </font>
+    </Text>
+    <TextField fx:id="samplingTextField" layoutX="188.0" layoutY="123.0" prefHeight="25.0" prefWidth="63.0" text="0" />
+    <Text layoutX="293.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Табличные значения" wrappingWidth="180.99999660253525">
+        <font>
+          <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="314.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Компоненты в точке" wrappingWidth="180.99999660253525">
+        <font>
+          <Font size="18.0" />
+        </font>
+    </Text>
+    <Text layoutX="26.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Точность результатов:" wrappingWidth="162.13672006130219">
+        <font>
+          <Font size="15.0" />
+        </font>
+    </Text>
+    <ComboBox fx:id="precisionComboBox" layoutX="188.0" layoutY="59.0" onAction="#precisionSelected" prefHeight="25.0" prefWidth="63.0" />
+   <Text layoutX="489.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X:">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Text>
+   <TextField fx:id="pointTextField" layoutX="509.0" layoutY="23.0" prefHeight="25.0" prefWidth="63.0" />
+   <Button layoutX="581.0" layoutY="22.0" mnemonicParsing="false" onAction="#findButtonClicked" prefHeight="25.0" prefWidth="63.0" text="Найти" />
+   <Text fx:id="pointComponentsText" layoutX="313.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" " wrappingWidth="331.13671875">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Text>
+   <Button layoutX="21.0" layoutY="193.0" mnemonicParsing="false" onAction="#createFileBClicked" prefHeight="36.0" prefWidth="232.0" text="Сохранить результаты расчёта в файл" />
+   <Button layoutX="487.0" layoutY="181.0" mnemonicParsing="false" onAction="#graphicsButtonClicked" prefHeight="25.0" prefWidth="252.0" text="Графики" />
+   <Button layoutX="487.0" layoutY="148.0" mnemonicParsing="false" onAction="#diagramButtonClicked" prefHeight="25.0" prefWidth="252.0" text="Эпюры" />
+   <Button layoutX="26.0" layoutY="19.0" mnemonicParsing="false" onAction="#openButtonClicked" prefHeight="31.0" prefWidth="226.0" text="Открыть файл">
+      <font>
+         <Font size="15.0" />
+      </font>
+   </Button>
+</AnchorPane>

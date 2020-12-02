@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="92.0"
+            prefWidth="231.0"
+            xmlns="http://javafx.com/javafx/10.0.2-internal"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="keelfy.sapr.controller.misc.ChooseFileController">
+   <TextField layoutX="25.0" layoutY="48.0" fx:id="fileNameTextField"/>
+   <Text layoutX="32.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Введите название файла" />
+   <Button defaultButton="true" layoutX="178.0" layoutY="48.0" mnemonicParsing="false" onAction="#okButtonClicked" text="ОК" />
+</AnchorPane>

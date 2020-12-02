@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="205.0" prefWidth="228.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keelfy.sapr.controller.MainMenuController">
+   <Button layoutX="26.0" layoutY="26.0" mnemonicParsing="false" onAction="#openPreProcessor" prefHeight="40.0" prefWidth="179.0" text="Препроцессор" />
+   <Button layoutX="26.0" layoutY="81.0" mnemonicParsing="false" onAction="#openProcessor" prefHeight="40.0" prefWidth="179.0" text="Процессор" />
+   <Button layoutX="26.0" layoutY="138.0" mnemonicParsing="false" onAction="#openPostProcessor" prefHeight="40.0" prefWidth="179.0" text="Постпроцессор" />
+</AnchorPane>

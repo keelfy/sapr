@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keelfy.sapr.controller.processing.PreProcessorController">
+    <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0">
+        <TextField fx:id="elasticityTextField" layoutX="115.0" layoutY="487.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+        <TextField fx:id="areaTextField" layoutX="38.0" layoutY="487.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+        <Text layoutX="140.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Е">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Text>
+        <Text layoutX="63.0" layoutY="477.0" strokeType="OUTSIDE" strokeWidth="0.0" text="А">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Button layoutX="37.0" layoutY="518.0" mnemonicParsing="false" onAction="#addBarClicked" prefHeight="25.0" prefWidth="282.0" text="Добавить стержень" />
+        <TableView fx:id="barTable" layoutX="32.0" layoutY="17.0" prefHeight="434.0" prefWidth="309.0">
+            <columns>
+                <TableColumn fx:id="barIdColumn" editable="false" prefWidth="55.0" text="№" />
+                <TableColumn fx:id="areaColumn" editable="false" prefWidth="77.0" text="A" />
+                <TableColumn fx:id="elasticityColumn" editable="false" minWidth="0.0" prefWidth="73.0" text="E" />
+                <TableColumn fx:id="lengthColumn" editable="false" prefWidth="74.0" text="L" />
+                <TableColumn fx:id="sigmaColumn" editable="false" prefWidth="75.0" text="σ" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Text layoutX="214.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L">
+            <font>
+                <Font size="19.0" />
+            </font>
+        </Text>
+        <TextField fx:id="lengthTextField" layoutX="188.0" layoutY="487.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+        <Button layoutX="37.0" layoutY="555.0" mnemonicParsing="false" onAction="#removeBarClicked" prefHeight="25.0" prefWidth="282.0" text="Удалить последний стержень" />
+        <Text layoutX="511.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нагрузки">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </Text>
+        <Text layoutX="467.0" layoutY="512.0" strokeType="OUTSIDE" strokeWidth="0.0" text="F">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text layoutX="598.0" layoutY="479.0" strokeType="OUTSIDE" strokeWidth="0.0" text="№ стержня">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <Text layoutX="676.0" layoutY="511.0" strokeType="OUTSIDE" strokeWidth="0.0" text="q">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <TextField fx:id="loadTextField" layoutX="693.0" layoutY="493.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+        <TextField fx:id="forceTextField" layoutX="486.0" layoutY="493.0" prefHeight="25.0" prefWidth="50.0" text="0" />
+        <Button layoutX="676.0" layoutY="531.0" mnemonicParsing="false" onAction="#addLoadClicked" text="Добавить " />
+        <ComboBox fx:id="loadComboBox" layoutX="693.0" layoutY="461.0" onAction="#loadCBoxClicked" prefHeight="25.0" prefWidth="39.0" />
+        <Text layoutX="852.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Заделки">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Text>
+        <CheckBox fx:id="rightTermination" layoutX="791.0" layoutY="52.0" mnemonicParsing="false" onAction="#rightTerminationClicked" selected="true" text="Право">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </CheckBox>
+        <CheckBox fx:id="leftTermination" layoutX="900.0" layoutY="52.0" mnemonicParsing="false" onAction="#leftTerminationClicked" selected="true" text="Лево">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </CheckBox>
+        <TextField fx:id="sigmaTextField" layoutX="260.0" layoutY="487.0" prefHeight="25.0" prefWidth="60.0" text="0" />
+        <Text layoutX="281.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="σ ">
+            <font>
+                <Font size="22.0" />
+            </font>
+        </Text>
+        <Text layoutX="403.0" layoutY="480.0" strokeType="OUTSIDE" strokeWidth="0.0" text="№ узла" wrappingWidth="73.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <ComboBox fx:id="nodeComboBox" layoutX="486.0" layoutY="461.0" onAction="#nodeCBoxClicked" prefHeight="25.0" prefWidth="27.0" />
+        <TableView fx:id="forceTable" layoutX="367.0" layoutY="52.0" prefHeight="399.0" prefWidth="168.0">
+            <columns>
+                <TableColumn fx:id="forceIdColumn" prefWidth="75.0" text="№ Узла" />
+                <TableColumn fx:id="forceValueColumn" prefWidth="75.0" text="F" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <TableView fx:id="loadTable" layoutX="568.0" layoutY="52.0" prefHeight="399.0" prefWidth="179.0">
+            <columns>
+                <TableColumn fx:id="loadIdColumn" prefWidth="75.0" text="№ стержня" />
+                <TableColumn fx:id="loadValueColumn" prefWidth="68.0" text="q" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+        <Button layoutX="467.0" layoutY="531.0" mnemonicParsing="false" onAction="#addForceClicked" text="Добавить" />
+        <Button layoutX="783.0" layoutY="212.0" mnemonicParsing="false" onAction="#drawButtonClicked" prefHeight="44.0" prefWidth="212.0" text="Отрисовать конструкцию">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+        <Button layoutX="780.0" layoutY="338.0" mnemonicParsing="false" onAction="#saveButtonClicked" prefHeight="52.0" prefWidth="218.0" text="Сохранить в файл">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Button layoutX="780.0" layoutY="399.0" mnemonicParsing="false" onAction="#loadButtonClicked" prefHeight="52.0" prefWidth="218.0" text="Открыть файл">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+    </AnchorPane>
+</VBox>

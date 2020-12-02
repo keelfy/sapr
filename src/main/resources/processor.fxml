@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="71.0" prefWidth="354.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="keelfy.sapr.controller.processing.ProcessorController">
+   <Text layoutX="14.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0" text="Название файла:" />
+   <TextField fx:id="fileNameTextField" layoutX="14.0" layoutY="33.0" />
+   <Button fx:id="openButton" layoutX="177.0" layoutY="23.0" mnemonicParsing="false" onAction="#calculateButtonClicked" text="Провести расчёт в файле" />
+</AnchorPane>

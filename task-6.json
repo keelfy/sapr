@@ -1,0 +1,38 @@
+{
+  "pre-processor" : {
+    "bars" : [ {
+      "id" : 0,
+      "area" : 2.0,
+      "elasticity" : 2.0E11,
+      "length" : 2.0,
+      "sigma" : 1.6E8
+    }, {
+      "id" : 1,
+      "area" : 1.0,
+      "elasticity" : 2.0E11,
+      "length" : 4.0,
+      "sigma" : 1.6E8
+    } ],
+    "forces" : [ ],
+    "loads" : [ {
+      "id" : 0,
+      "value" : 9.0
+    }, {
+      "id" : 1,
+      "value" : -2.0
+    } ],
+    "borders" : {
+      "left" : true,
+      "right" : true
+    }
+  },
+  "processor" : {
+    "nxks" : [ ],
+    "nxbs" : [ ],
+    "uxas" : [ ],
+    "uxbs" : [ ],
+    "uxcs" : [ ],
+    "sigmabs" : [ ],
+    "sigmaks" : [ ]
+  }
+}
